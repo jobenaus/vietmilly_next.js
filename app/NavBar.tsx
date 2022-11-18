@@ -4,7 +4,7 @@ import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
-import vespaSVG from '../public/vespa.svg';
+import logo from '../public/vespa.svg';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -44,13 +44,13 @@ export default function Example() {
                   >
                     <Image
                       className="block h-8 w-auto lg:hidden"
-                      src={vespaSVG}
+                      src={logo}
                       alt="Vietmilly"
                     />
 
                     <Image
                       className="hidden h-8 w-auto lg:block"
-                      src={vespaSVG}
+                      src={logo}
                       alt="Vietmilly"
                     />
                   </Link>
