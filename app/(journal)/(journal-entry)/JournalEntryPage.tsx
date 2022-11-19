@@ -1,8 +1,8 @@
-import ReactImageFallback from 'react-image-fallback';
 import { DiaryEntryModel, isDiaryEntry } from '../../../models/DiaryModel';
 import { JournalEntryModel } from '../../../models/JournalModel';
 import { formatDate } from '../../../utils/formatDate';
 import JournalEntrySection from './JournalEntrySection';
+import Image from 'next/image';
 
 type JournalEntryLayoutProps = {
   journalEntry: JournalEntryModel;
@@ -26,12 +26,13 @@ export default function JournalEntryLayout({
             </small>
           )}
         </header>
-        {/* <ReactImageFallback
+        <Image
           src={thumbnailPath}
-          fallbackImage={thumbnailPathFallback}
           alt={thumbnailPath}
+          width={896}
+          height={576}
           className="max-h-[36rem] w-full object-cover"
-        /> */}
+        />
         <div>
           {journalEntry.sections.map((journalEntrySection) => (
             <JournalEntrySection

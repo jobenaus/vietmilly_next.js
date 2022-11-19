@@ -1,12 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
+import ReactHTMLParser from 'react-html-parser';
 import { isBlogPost } from '../../models/BlogModel';
 import { DiaryEntryModel, isDiaryEntry } from '../../models/DiaryModel';
 import { JournalEntryModel } from '../../models/JournalModel';
 import { formatDate } from '../../utils/formatDate';
 import { truncateText } from '../../utils/formatPreviewText';
-import { ReactHTMLParser } from '../../hacks/react-html-parser';
 
 type JournalEntryPreviewProps = {
   journalEntry: JournalEntryModel;

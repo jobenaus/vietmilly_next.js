@@ -1,7 +1,7 @@
-// import ReactHTMLParser from 'react-html-parser';
+import ReactHTMLParser from 'react-html-parser';
 
 import { v4 as uuidv4 } from 'uuid';
-import { ReactHTMLParser } from '../../../hacks/react-html-parser';
+
 import Image from 'next/image';
 
 import { JournalImgModel } from '../../../models/JournalModel';

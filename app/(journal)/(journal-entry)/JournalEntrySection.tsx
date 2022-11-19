@@ -1,4 +1,4 @@
-import { ReactHTMLParser } from '../../../hacks/react-html-parser';
+import ReactHTMLParser from 'react-html-parser';
 import {
   JournalImgModel,
   JournalSectionModel,
