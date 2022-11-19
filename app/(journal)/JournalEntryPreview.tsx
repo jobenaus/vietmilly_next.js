@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import ReactImageFallback from 'react-image-fallback';
+import Image from 'next/image';
+import testImg from '../../public/IMG_4893.jpeg';
 
 import { isBlogPost } from '../../models/BlogModel';
 import { DiaryEntryModel, isDiaryEntry } from '../../models/DiaryModel';
@@ -15,7 +16,7 @@ type JournalEntryPreviewProps = {
 export default function JournalEntryPreview({
   journalEntry,
 }: JournalEntryPreviewProps) {
-  const thumbnailPath = `/imgs/webp/${journalEntry.thumbnail}_1280px.webp`;
+  const thumbnailPath = `/imgs/jpeg/${journalEntry.thumbnail}_1280px.jpeg`;
   const thumbnailPathFallback = `/imgs/jpeg/${journalEntry.thumbnail}_1280px.jpeg`;
   const title = journalEntry.title;
   const previewText = truncateText(journalEntry.sections[0].text, 195, '...');
@@ -30,6 +31,14 @@ export default function JournalEntryPreview({
   return (
     <div className="border-2 rounded-2xl p-5 flex flex-col max-w-xl mx-auto md:flex-row md:max-w-none gap-x-4">
       <div>
+        <Image
+          src={thumbnailPath}
+          alt={journalEntry.thumbnail}
+          width={532}
+          height={399}
+          className="relative pb-1 rounded-t-md h-full w-[1280px] aspect-[4/3] justify-self-center object-cover"
+        />
+
         {/* <ReactImageFallback
           src={thumbnailPath}
           fallbackImage={thumbnailPathFallback}

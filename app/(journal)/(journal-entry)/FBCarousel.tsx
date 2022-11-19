@@ -3,6 +3,7 @@
 // import { JournalImgModel } from '../models/JournalModel';
 import { v4 as uuidv4 } from 'uuid';
 import { ReactHTMLParser } from '../../../hacks/react-html-parser';
+import Image from 'next/image';
 
 import { JournalImgModel } from '../../../models/JournalModel';
 
@@ -27,10 +28,12 @@ export default function FBCarousel({ journalImgs }: FBCarouselProps) {
               key={uuidv4()}
               className="flex justify-center items-center h-full bg-neutral-300"
             >
-              <img
+              <Image
                 src={imgPath}
                 className="max-h-full max-w-full absolute"
                 alt={imgPath}
+                width={1280}
+                height={960}
               />
               {journalImg.description && (
                 <p className="prose prose-a:font-normal text-black z-10 self-end m-3 p-2 rounded-md bg-neutral-50 bg-opacity-60 transition duration-300 group-hover:opacity-40">
