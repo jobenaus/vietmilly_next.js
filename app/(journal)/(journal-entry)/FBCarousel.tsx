@@ -1,5 +1,3 @@
-'use client';
-
 // import ReactHTMLParser from 'react-html-parser';
 
 import { v4 as uuidv4 } from 'uuid';
@@ -8,9 +6,6 @@ import Image from 'next/image';
 
 import { JournalImgModel } from '../../../models/JournalModel';
 import { Carousel } from 'flowbite-react/lib/esm/components/Carousel/Carousel';
-
-
-
 
 type FBCarouselProps = {
   journalImgs: JournalImgModel[];
