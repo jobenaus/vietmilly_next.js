@@ -12,8 +12,7 @@ export default function JournalEntryLayout({
   journalEntry,
 }: JournalEntryLayoutProps) {
   const title = journalEntry.title;
-  const thumbnailPath = `/imgs/webp/${journalEntry.thumbnail}_1280px.webp`;
-  const thumbnailPathFallback = `/imgs/jpeg/${journalEntry.thumbnail}_1280px.jpeg`;
+  const thumbnailPath = `/imgs/${journalEntry.thumbnail}.jpeg`;
   const date = (diaryEntry: DiaryEntryModel) => formatDate(diaryEntry.date);
   return (
     <div className="px-5 max-w-6xl  pb-1">
