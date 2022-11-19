@@ -22,8 +22,8 @@ export default function JournalEntryPreview({
 
   const date = (diaryEntry: DiaryEntryModel) => formatDate(diaryEntry.date);
   const link = () => {
-    if (isBlogPost(journalEntry)) return `/blog-${journalEntry.id.toString()}`;
-    if (isDiaryEntry(journalEntry)) return `/diary-${journalEntry.date}`;
+    if (isBlogPost(journalEntry)) return `/blog/${journalEntry.id.toString()}`;
+    if (isDiaryEntry(journalEntry)) return `/diary/${journalEntry.date}`;
     throw new Error(`Unknown journal entry type: ${journalEntry}`);
   };
 
