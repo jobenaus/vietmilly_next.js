@@ -33,9 +33,10 @@ export default function FBCarousel({ journalImgs }: FBCarouselProps) {
               <Image
                 src={imgPath}
                 className="max-h-full max-w-full object-contain absolute"
-                alt={imgPath}
-                width={1280}
-                height={960}
+                alt={journalImg.img}
+                width={896}
+                height={672}
+                quality={75}
               />
 
               {journalImg.description && (
