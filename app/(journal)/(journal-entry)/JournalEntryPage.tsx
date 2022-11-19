@@ -27,7 +27,7 @@ export default function JournalEntryLayout({
         </header>
         <Image
           src={thumbnailPath}
-          alt={thumbnailPath}
+          alt={journalEntry.thumbnail}
           width={896}
           height={576}
           className="max-h-[36rem] w-full object-cover"
