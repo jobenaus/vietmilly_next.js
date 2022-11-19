@@ -7,7 +7,6 @@ export default function DiaryEntry({ params }: { params: { date: string } }) {
     (diaryEntry) => diaryEntry.date === params.date
   );
   if (!diaryEntry) return notFound();
-  console.log(diaryEntry);
 
   return <JournalEntryPage journalEntry={diaryEntry} />;
 }
