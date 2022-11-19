@@ -36,6 +36,7 @@ export default function JournalEntryPreview({
           height={399}
           quality={75}
           className="relative pb-1 rounded-t-md h-full w-[1280px] aspect-[4/3] justify-self-center object-cover"
+          priority
         />
       </div>
 

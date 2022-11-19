@@ -37,6 +37,7 @@ export default function FBCarousel({ journalImgs }: FBCarouselProps) {
                 width={896}
                 height={672}
                 quality={75}
+                priority
               />
 
               {journalImg.description && (
