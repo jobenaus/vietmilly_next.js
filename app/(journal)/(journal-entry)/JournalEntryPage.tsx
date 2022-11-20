@@ -30,6 +30,7 @@ export default function JournalEntryLayout({
           alt={journalEntry.thumbnail}
           width={896}
           height={576}
+          priority
           className="max-h-[36rem] w-full object-cover"
         />
         <div>
