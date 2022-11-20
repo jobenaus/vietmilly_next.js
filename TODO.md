@@ -2,7 +2,6 @@ necessary features:
 
 nice to have features:
 - bildunterschrift unter bild im carousel
-- auto truncate text depending on space
 - import Pictures
 - navbar animation
 
