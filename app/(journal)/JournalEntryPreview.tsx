@@ -5,7 +5,6 @@ import { isBlogPost } from '../../models/BlogModel';
 import { DiaryEntryModel, isDiaryEntry } from '../../models/DiaryModel';
 import { JournalEntryModel } from '../../models/JournalModel';
 import { formatDate } from '../../utils/formatDate';
-import { truncateText } from '../../utils/formatPreviewText';
 
 type JournalEntryPreviewProps = {
   journalEntry: JournalEntryModel;
@@ -16,7 +15,6 @@ export default function JournalEntryPreview({
 }: JournalEntryPreviewProps) {
   const thumbnailPath = `/imgs/${journalEntry.thumbnail}.jpeg`;
   const title = journalEntry.title;
-  // const previewText = truncateText(journalEntry.sections[0].text, 195, '...');
   const previewText = journalEntry.sections[0].text;
 
   const date = (diaryEntry: DiaryEntryModel) => formatDate(diaryEntry.date);
@@ -28,14 +26,14 @@ export default function JournalEntryPreview({
 
   return (
     <div className="border-2 rounded-2xl p-5 flex flex-col max-w-xl mx-auto md:flex-row md:max-w-none gap-x-4">
-      <div className="flex-none aspect-square h-96">
+      <div className="aspect-[4/3] md:h-72 object-cover relative">
         <Image
           src={thumbnailPath}
           alt={journalEntry.thumbnail}
           width={532}
           height={399}
           quality={75}
-          className="relative pb-1 rounded-t-md  object-cover"
+          className="relative pb-1 rounded-t-md"
           priority
         />
       </div>
