@@ -1,3 +1,4 @@
+"use client"
 import ReactHTMLParser from 'react-html-parser';
 
 import { v4 as uuidv4 } from 'uuid';
