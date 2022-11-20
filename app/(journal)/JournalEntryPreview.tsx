@@ -16,7 +16,8 @@ export default function JournalEntryPreview({
 }: JournalEntryPreviewProps) {
   const thumbnailPath = `/imgs/${journalEntry.thumbnail}.jpeg`;
   const title = journalEntry.title;
-  const previewText = truncateText(journalEntry.sections[0].text, 195, '...');
+  // const previewText = truncateText(journalEntry.sections[0].text, 195, '...');
+  const previewText = journalEntry.sections[0].text;
 
   const date = (diaryEntry: DiaryEntryModel) => formatDate(diaryEntry.date);
   const link = () => {
@@ -27,14 +28,14 @@ export default function JournalEntryPreview({
 
   return (
     <div className="border-2 rounded-2xl p-5 flex flex-col max-w-xl mx-auto md:flex-row md:max-w-none gap-x-4">
-      <div>
+      <div className="flex-none aspect-square h-96">
         <Image
           src={thumbnailPath}
           alt={journalEntry.thumbnail}
           width={532}
           height={399}
           quality={75}
-          className="relative pb-1 rounded-t-md h-full w-[1280px] aspect-[4/3] justify-self-center object-cover"
+          className="relative pb-1 rounded-t-md  object-cover"
           priority
         />
       </div>
@@ -48,7 +49,9 @@ export default function JournalEntryPreview({
             </small>
           )}
         </header>
-        <p className="text-lg text-black">{ReactHTMLParser(previewText)}</p>
+        <p className="text-lg text-black line-clamp-3 sm:line-clamp-4">
+          {ReactHTMLParser(previewText)}
+        </p>
         <div className="flex justify-center pt-1 ">
           <Link
             className="rounded-lg bg-red-600 bg-opacity-90 px-4 mt-3 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-red-700 hover:bg-red-700 hover:bg-opacity-90"
