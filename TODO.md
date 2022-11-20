@@ -8,6 +8,7 @@ nice to have features:
 refactoring:
 - rewrite carousel
 - refactoring viewModel
+- delete unessacary css
 
 next steps:
 - firebase storage
