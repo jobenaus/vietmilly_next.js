@@ -2,9 +2,9 @@ import { blogPosts } from '../../../../utils/database';
 import { notFound } from 'next/navigation';
 import JournalEntryPage from '../../(journal-entry)/JournalEntryPage';
 
-export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    id: post.id.toString(),
+export function generateStaticParams() {
+  return blogPosts.map((blogPost) => ({
+    id: blogPost.id.toString(),
   }));
 }
 
