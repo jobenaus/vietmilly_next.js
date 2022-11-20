@@ -2,6 +2,12 @@ import { blogPosts } from '../../../../utils/database';
 import { notFound } from 'next/navigation';
 import JournalEntryPage from '../../(journal-entry)/JournalEntryPage';
 
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    id: post.id.toString(),
+  }));
+}
+
 export default function BlogPost({ params }: { params: { id: string } }) {
   const blogPost = blogPosts.find(
     (blogPost) => blogPost.id === Number(params.id)
