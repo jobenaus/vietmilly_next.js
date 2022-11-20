@@ -11,7 +11,6 @@ refactoring:
 - refactoring viewModel
 
 next steps:
-- static site generation
 - firebase storage
 - Home page
 - Neuste Page
