@@ -18,15 +18,10 @@ export default function JournalPagePreview({
       <h1 className="text-5xl font-bold my-">{previewTitle}</h1>
       <div className="max-w-6xl sm:p-3 md:p-5">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {previewJournalEntrys.map((journalEntry) => (
-              <div
-                key={journalEntry.upload_date}
-                className="flex justify-center"
-              >
-                <div className="bg-neutral-50 p-3 rounded-xl">
-                  <JournalPagePreviewItem journalEntry={journalEntry} />
-                </div>
+              <div key={journalEntry.upload_date}>
+                <JournalPagePreviewItem journalEntry={journalEntry} />
               </div>
             ))}
           </div>
