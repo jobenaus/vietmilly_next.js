@@ -2,9 +2,9 @@ import { JournalEntryModel } from '../../models/JournalModel';
 import { blogPosts } from '../../utils/database';
 
 export default function Dev() {
-  const middleColor = 0xe02523;
+  const middleColor = (0.9 * 0xe02523 + 0.1 * 0xffffff).toString(16);
   console.log(middleColor);
-  const middleClassnames = `bg-[${middleColor}] flex-grow`;
+  const middleClassnames = `bg-[#${middleColor}] flex-grow`;
   return (
     <div className="h-screen bg-white flex flex-col">
       <div className="bg-red-600 flex-grow"></div>
