@@ -1,3 +1,4 @@
+import { JournalEntryModel } from '../../models/JournalModel';
 import { blogPosts } from '../../utils/database';
 
 export default function Dev() {
@@ -18,9 +19,15 @@ export default function Dev() {
     '2020-11-19',
   ];
 
-  const sortedBlogPosts = blogPosts.sort((a, b) =>
-    a.upload_date < b.upload_date ? 1 : -1
-  );
+  function compareDates(a: string, b: string) {
+    return new Date(a).getTime() - new Date(b).getTime();
+  }
+
+  function compareJournalEntry(a: JournalEntryModel, b: JournalEntryModel) {
+    return compareDates(a.upload_date, b.upload_date);
+  }
+
+  const sortedBlogPosts = blogPosts.sort(compareJournalEntry).reverse();
 
   return (
     <div>
