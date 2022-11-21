@@ -27,6 +27,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.8",
     "@types/react-html-parser": "^2.0.2",
     "@types/react-image-fallback": "^8.0.3",

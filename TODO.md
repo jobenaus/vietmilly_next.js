@@ -2,19 +2,17 @@ necessary features:
 
 nice to have features:
 - bildunterschrift unter bild im carousel
-- auto truncate text depending on space
 - import Pictures
 - navbar animation
 
 refactoring:
 - rewrite carousel
 - refactoring viewModel
+- delete unessacary css
 
 next steps:
-- static site generation
-- firebase storage
-- Home page
 - Neuste Page
+- Home page
 - Besseren workflow zum Blog hinzufügen finden (React Quill)
 - Download page
 - newsletter
