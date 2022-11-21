@@ -1,17 +1,42 @@
+import { JournalEntryModel } from '../../models/JournalModel';
+import { blogPosts } from '../../utils/database';
+
 export default function Dev() {
+  const dateFormatter = (dateString: string) =>
+    new Intl.DateTimeFormat('en-GB', {
+      dateStyle: 'full',
+      timeStyle: 'long',
+      timeZone: 'Australia/Sydney',
+    }).format(new Date(dateString));
+
+  const dates = [
+    '2022-10-19T00:00:00.000Z',
+    '2020-10-19T00:00:00.000Z',
+    '2020-10-19T00:00:09.000Z',
+    '2020-10-19T00:01:09.100Z',
+    '2020-10-18',
+    '2022-11-19T00:00:00.000Z',
+    '2020-11-19',
+  ];
+
+  function compareDates(a: string, b: string) {
+    return new Date(a).getTime() - new Date(b).getTime();
+  }
+
+  function compareJournalEntry(a: JournalEntryModel, b: JournalEntryModel) {
+    return compareDates(a.upload_date, b.upload_date);
+  }
+
+  const sortedBlogPosts = blogPosts.sort(compareJournalEntry).reverse();
+
   return (
-    <div className="line-clamp-1">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti in
-      ratione blanditiis explicabo necessitatibus vitae ex repellat recusandae
-      reprehenderit distinctio. Explicabo similique cum accusamus, consequuntur
-      rem illo aliquid magni dolores ad alias quod, sint culpa dolore distinctio
-      dolor porro consequatur minus voluptatem! Asperiores temporibus autem
-      quisquam. Accusantium hic aperiam magnam nesciunt eius odio? Excepturi id
-      rem, exercitationem, sint harum a numquam quaerat ullam enim ex, saepe
-      consectetur velit veritatis impedit sunt aut atque. Qui, accusamus minima
-      accusantium ducimus enim excepturi itaque facilis ipsam quis molestias
-      voluptatum nesciunt reiciendis, eius temporibus maxime tempore. Velit cum
-      numquam, soluta reiciendis natus fugit quod.
+    <div>
+      {sortedBlogPosts.map((blogPost) => (
+        <div key={blogPost.id} className="pt-4">
+          <p>Titel: {blogPost.title}</p>
+          <p>Upload Date: {dateFormatter(blogPost.upload_date)}</p>
+        </div>
+      ))}
     </div>
   );
 }

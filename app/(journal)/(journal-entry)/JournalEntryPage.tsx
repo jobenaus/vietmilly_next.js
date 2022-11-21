@@ -1,6 +1,6 @@
 import { DiaryEntryModel, isDiaryEntry } from '../../../models/DiaryModel';
 import { JournalEntryModel } from '../../../models/JournalModel';
-import { formatDate } from '../../../utils/formatDate';
+import { formatDate } from '../../../utils/format';
 import JournalEntrySection from './JournalEntrySection';
 import Image from 'next/image';
 
