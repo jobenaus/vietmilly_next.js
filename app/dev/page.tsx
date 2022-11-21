@@ -18,10 +18,13 @@ export default function Dev() {
     '2020-11-19',
   ];
 
-  const sortedDates = dates.sort().reverse();
+  const sortedBlogPosts = blogPosts.sort((a, b) =>
+    a.upload_date < b.upload_date ? 1 : -1
+  );
+
   return (
     <div>
-      {blogPosts.map((blogPost) => (
+      {sortedBlogPosts.map((blogPost) => (
         <div key={blogPost.id} className="pt-4">
           <p>Titel: {blogPost.title}</p>
           <p>Upload Date: {dateFormatter(blogPost.upload_date)}</p>
