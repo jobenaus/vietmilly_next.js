@@ -11,7 +11,6 @@ refactoring:
 - delete unessacary css
 
 next steps:
-- Neuste Page
 - Home page
 - Besseren workflow zum Blog hinzufügen finden (React Quill)
 - Download page
