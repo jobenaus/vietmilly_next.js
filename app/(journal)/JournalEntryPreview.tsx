@@ -4,7 +4,7 @@ import ReactHTMLParser from 'react-html-parser';
 import { isBlogPost } from '../../models/BlogModel';
 import { DiaryEntryModel, isDiaryEntry } from '../../models/DiaryModel';
 import { JournalEntryModel } from '../../models/JournalModel';
-import { formatDate } from '../../utils/formatDate';
+import { formatDate } from '../../utils/format';
 
 type JournalEntryPreviewProps = {
   journalEntry: JournalEntryModel;
