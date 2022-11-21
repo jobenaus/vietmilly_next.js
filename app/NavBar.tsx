@@ -6,6 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../public/milly-color.svg';
 
+const iconHref = '/latest';
+
 const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Neuste', href: '/latest', current: false },
@@ -39,7 +41,7 @@ export default function Example() {
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <Link
-                    href="/blog"
+                    href={iconHref}
                     className="flex flex-shrink-0 items-center"
                   >
                     <Image
