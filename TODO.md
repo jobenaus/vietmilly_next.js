@@ -11,9 +11,8 @@ refactoring:
 - delete unessacary css
 
 next steps:
-- firebase storage
-- Home page
 - Neuste Page
+- Home page
 - Besseren workflow zum Blog hinzufügen finden (React Quill)
 - Download page
 - newsletter
