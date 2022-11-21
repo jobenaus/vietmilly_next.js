@@ -8,7 +8,7 @@ import logo from '../public/milly-color.svg';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
-  { name: 'Neuste', href: '/newest', current: false },
+  { name: 'Neuste', href: '/latest', current: false },
   { name: 'Tagebuch', href: '/diary', current: false },
   { name: 'Blog', href: '/blog', current: false },
   // { name: 'Dev', href: '/dev', current: false },
