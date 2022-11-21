@@ -1,5 +1,5 @@
-import JournalPage from '../(journal)/JournalPage';
 import { JournalEntryModel } from '../../models/JournalModel';
+import JournalPagePreviewItem from './JournalPagePreviewItem';
 
 type JournalPagePreviewProps = {
   journalEntrys: JournalEntryModel[];
@@ -16,7 +16,22 @@ export default function JournalPagePreview({
   return (
     <div className="flex flex-col items-center py-6 border-b-2 border-black">
       <h1 className="text-5xl font-bold my-">{previewTitle}</h1>
-      <JournalPage journalEntrys={previewJournalEntrys} />
+      <div className="max-w-6xl sm:p-3 md:p-5">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-3">
+            {previewJournalEntrys.map((journalEntry) => (
+              <div
+                key={journalEntry.upload_date}
+                className="flex justify-center"
+              >
+                <div className="bg-neutral-50 p-3 rounded-xl">
+                  <JournalPagePreviewItem journalEntry={journalEntry} />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
