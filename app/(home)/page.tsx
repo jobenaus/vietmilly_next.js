@@ -9,8 +9,8 @@ import JournalPagePreview from './JournalPagePreview';
 export default function Home() {
   const previewSize = 3;
   return (
-    <div className="mx-5 sm:mx-8 md:mx-12">
-      {/* <p className="md:hidden ">md</p>
+    <div className="mx-5 sm:mx-8 md:mx-12 lg:mx-32">
+      {/* <p className="xl:hidden ">xl</p>
       <p className="lg:hidden">lg</p> */}
 
       <div className="mx-auto max-w-lg sm:max-w-6xl">
