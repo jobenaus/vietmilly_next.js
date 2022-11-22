@@ -14,10 +14,10 @@ export default function JournalPagePreview({
 }: JournalPagePreviewProps) {
   const previewJournalEntrys = journalEntrys.slice(0, previewSize);
   return (
-    <div className="flex flex-col items-center border-b-2 border-black">
+    <div className="pb-12 flex flex-col items-center border-b-2 last:border-b-0 border-black">
       <h1 className="text-5xl font-bold mt-12 mb-9">{previewTitle}</h1>
 
-      <div className="sm:grid sm:grid-cols-3 sm:gap-8">
+      <div className="flex flex-col sm:grid-cols-3 sm:grid gap-8">
         {previewJournalEntrys.map((journalEntry) => (
           <div key={journalEntry.upload_date}>
             <JournalPagePreviewItem journalEntry={journalEntry} />

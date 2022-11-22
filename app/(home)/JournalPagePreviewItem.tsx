@@ -25,9 +25,9 @@ export default function JournalPagePreviewItem({
   return (
     <Link
       href={link()}
-      className="hover:opacity-90 duration-100 group flex flex-col items-center"
+      className="hover:opacity-90 duration-100 group"
     >
-      <div className="aspect-[4/3] w-full object-cover relative">
+      <div className="aspect-[4/3] w-full object-cover relative mb-11">
         <Image
           src={thumbnailPath}
           alt={journalEntry.thumbnail}
