@@ -39,7 +39,7 @@ export default function JournalPagePreviewItem({
 
         <div>
           <header className="py-2">
-            <h1 className="text-2xl font-extrabold pb-0.5 text-red-600 text-opacity-100 group-hover:text-black group-hover:text-opacity-100">
+            <h1 className="text-2xl font-extrabold pb-0.5 text-red-600 text-opacity-90 group-hover:text-black group-hover:text-opacity-100">
               {title}
             </h1>
             {isDiaryEntry(journalEntry) && (
