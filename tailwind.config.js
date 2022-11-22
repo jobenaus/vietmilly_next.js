@@ -7,7 +7,16 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#c62222',
+        },
+        secondary: {
+          DEFAULT: '#ffd22f',
+        },
+      },
+    },
   },
   plugins: [
     require('flowbite/plugin'),
