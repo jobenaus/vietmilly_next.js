@@ -28,7 +28,8 @@ export default function JournalPagePreviewItem({
         <Image
           src={thumbnailPath}
           alt={journalEntry.thumbnail}
-          fill
+          width={512}
+          height={384}
           quality={75}
           priority
         />
