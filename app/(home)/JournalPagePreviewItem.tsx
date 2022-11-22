@@ -23,11 +23,8 @@ export default function JournalPagePreviewItem({
     throw new Error(`Unknown journal entry type: ${journalEntry}`);
   };
   return (
-    <Link
-      href={link()}
-      className="hover:opacity-90 duration-100 group"
-    >
-      <div className="aspect-[4/3] w-full object-cover relative mb-6 sm:mb-11">
+    <Link href={link()} className="hover:opacity-90 duration-100 group">
+      <div className="aspect-[4/3] w-full object-cover relative mb-6 sm:mb-4">
         <Image
           src={thumbnailPath}
           alt={journalEntry.thumbnail}
@@ -38,7 +35,7 @@ export default function JournalPagePreviewItem({
       </div>
 
       <header>
-        <h1 className="text-3xl font-extrabold text-primary group-hover:text-black duration-100">
+        <h1 className="text-3xl sm:text-xl font-extrabold text-primary group-hover:text-black duration-100">
           {title}
         </h1>
         {isDiaryEntry(journalEntry) && (
