@@ -23,33 +23,27 @@ export default function JournalPagePreviewItem({
     throw new Error(`Unknown journal entry type: ${journalEntry}`);
   };
   return (
-    <Link href={link()} className="hover:opacity-90 duration-100 group">
-      <div className="flex flex-col">
-        <div className="aspect-[4/3] object-cover relative">
-          <Image
-            src={thumbnailPath}
-            alt={journalEntry.thumbnail}
-            width={532}
-            height={399}
-            quality={75}
-            className="pb-1"
-            priority
-          />
-        </div>
+    <Link href={link()} className="hover:opacity-90 duration-100 group flex flex-col items-center">
+      <Image
+        src={thumbnailPath}
+        alt={journalEntry.thumbnail}
+        width={532}
+        height={399}
+        quality={75}
+        className="aspect-[4/3] object-cover"
+        priority
+      />
 
-        <div>
-          <header className="py-2">
-            <h1 className="text-2xl font-extrabold pb-0.5 text-primary group-hover:text-black duration-100">
-              {title}
-            </h1>
-            {isDiaryEntry(journalEntry) && (
-              <small className="text-neutral-600 text-base font-bold ">
-                {date(journalEntry)}
-              </small>
-            )}
-          </header>
-        </div>
-      </div>
+      <header>
+        <h1 className="text-2xl font-extrabold pb-0.5 text-primary group-hover:text-black duration-100">
+          {title}
+        </h1>
+        {isDiaryEntry(journalEntry) && (
+          <small className="text-neutral-600 text-base font-bold ">
+            {date(journalEntry)}
+          </small>
+        )}
+      </header>
     </Link>
   );
 }
