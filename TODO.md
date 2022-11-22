@@ -8,11 +8,9 @@ nice to have features:
 
 refactoring:
 - rewrite carousel
-- refactoring viewModel
 - delete unessacary css
 
 next steps:
-- Home page
 - Besseren workflow zum Blog hinzufügen finden (React Quill)
 - Download page
 - newsletter
