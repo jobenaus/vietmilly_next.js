@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../public/milly-color.svg';
 
-const iconHref = '/latest';
+const iconHref = '/';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -182,7 +182,7 @@ export default function Example() {
           </>
         )}
       </Disclosure>
-      <div className="bg-red-600 w-full h-1 opacity-90"></div>
+      <div className="bg-primary w-full h-1"></div>
     </>
   );
 }

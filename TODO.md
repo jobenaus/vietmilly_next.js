@@ -4,6 +4,7 @@ nice to have features:
 - bildunterschrift unter bild im carousel
 - import Pictures
 - navbar animation
+- finetune primary color
 
 refactoring:
 - rewrite carousel
@@ -11,7 +12,6 @@ refactoring:
 - delete unessacary css
 
 next steps:
-- Neuste Page
 - Home page
 - Besseren workflow zum Blog hinzufügen finden (React Quill)
 - Download page

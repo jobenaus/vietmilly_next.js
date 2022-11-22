@@ -3,6 +3,7 @@
     "date": "2022-10-02",
     "upload_date": "2022-05-11T20:41:00Z",
     "title": "Das ist ein längerer Titel der über ein paar Zeilen geht",
+    "favourite": true,
     "thumbnail": "IMG_4890",
     "introduction": "Guatemala’s active volcano Santiaguito erupts with an explosion of hot ash & rocks every few hours. So of course we decided to hike up the crater and go camping nearby.",
     "sections": [
@@ -89,6 +90,7 @@
     "date": "2022-10-03",
     "upload_date": "2022-05-11T20:41:00Z",
     "title": "Anreise",
+    "favourite": true,
     "thumbnail": "IMG_4890",
     "sections": [
       {
