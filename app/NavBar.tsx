@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../public/milly-color.svg';
 
-const iconHref = '/latest';
+const iconHref = '/';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },

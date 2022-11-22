@@ -9,7 +9,7 @@ import JournalPagePreview from './JournalPagePreview';
 export default function Home() {
   const previewSize = 3;
   return (
-    <div className="my-7 mx-3">
+    <div className="mx-3">
       <JournalPagePreview
         journalEntrys={latestJournalEntrys}
         previewSize={previewSize}

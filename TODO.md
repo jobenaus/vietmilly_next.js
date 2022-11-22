@@ -4,6 +4,7 @@ nice to have features:
 - bildunterschrift unter bild im carousel
 - import Pictures
 - navbar animation
+- finetune primary color
 
 refactoring:
 - rewrite carousel
