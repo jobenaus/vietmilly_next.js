@@ -1,6 +1,8 @@
 import {
   blogPosts,
   diaryEntrys,
+  favouriteBlogPosts,
+  favouriteDiaryEntries,
   latestJournalEntrys,
 } from '../../utils/database';
 
@@ -10,25 +12,26 @@ export default function Home() {
   const previewSize = 3;
   return (
     <div className="mx-5 sm:mx-8 md:mx-12 lg:mx-32">
-      {/* <p className="xl:hidden ">xl</p>
-      <p className="lg:hidden">lg</p> */}
-
       <div className="mx-auto max-w-lg sm:max-w-6xl">
         <JournalPagePreview
           journalEntrys={latestJournalEntrys}
           previewSize={previewSize}
           previewTitle="Neuste Journal Einträge"
         />
-        <JournalPagePreview
-          journalEntrys={blogPosts}
-          previewSize={previewSize}
-          previewTitle="Beliebteste Blog Posts"
-        />
-        <JournalPagePreview
-          journalEntrys={diaryEntrys}
-          previewSize={previewSize}
-          previewTitle="Beliebteste Tagebuch Einträge"
-        />
+        {favouriteBlogPosts.length > 0 && (
+          <JournalPagePreview
+            journalEntrys={favouriteBlogPosts}
+            previewSize={previewSize}
+            previewTitle="Beliebteste Blog Posts"
+          />
+        )}
+        {favouriteDiaryEntries.length > 0 && (
+          <JournalPagePreview
+            journalEntrys={favouriteDiaryEntries}
+            previewSize={previewSize}
+            previewTitle="Beliebteste Tagebuch Einträge"
+          />
+        )}
       </div>
     </div>
   );

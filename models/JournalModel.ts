@@ -13,6 +13,7 @@ export interface JournalImgModel {
 
 export interface JournalEntryModel {
   upload_date: string;
+  favourite?: boolean;
   title: string;
   thumbnail: string;
   sections: JournalSectionModel[];

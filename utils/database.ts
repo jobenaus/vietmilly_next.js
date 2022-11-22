@@ -13,3 +13,9 @@ export const latestJournalEntrys: JournalEntryModel[] = [
 ]
   .sort(compareJournalEntry)
   .reverse();
+export const favouriteBlogPosts: BlogPostModel[] = blogPosts.filter(
+  (blogPost) => blogPost.favourite === true
+);
+export const favouriteDiaryEntries: DiaryEntryModel[] = diaryEntrys.filter(
+  (diaryEntry) => diaryEntry.favourite === true
+);
