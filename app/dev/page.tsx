@@ -8,7 +8,7 @@ export default function Dev() {
   const imgs: JournalImgModel[] = blogPosts[0].sections[10].startImgs!;
 
   return (
-    <div className='w-2/3 border mx-auto mt-20'>
+    <div className="w-[500px] aspect-square border mx-auto mt-20">
       <NewCarousel journalImgs={imgs} />
     </div>
   );
