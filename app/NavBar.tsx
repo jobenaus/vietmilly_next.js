@@ -4,7 +4,7 @@ import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../public/milly-color.svg';
+import logo from '../public/favicon.svg';
 
 const iconHref = '/';
 
