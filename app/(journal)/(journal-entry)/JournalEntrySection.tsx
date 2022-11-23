@@ -1,9 +1,12 @@
+'use client';
+
 import ReactHTMLParser from 'react-html-parser';
 import {
   JournalImgModel,
   JournalSectionModel,
 } from '../../../models/JournalModel';
 import FBCarousel from './FBCarousel';
+import SwiperCarousel from './SwiperCarousel';
 
 type JournalEntrySectionProps = {
   journalEntrySection: JournalSectionModel;
@@ -23,7 +26,7 @@ export default function JournalEntrySection({
 
       {startImgs.length > 0 && (
         <div className="mt-7 mb-5">
-          <FBCarousel journalImgs={startImgs} />
+          <SwiperCarousel journalImgs={startImgs} />
         </div>
       )}
 
@@ -33,7 +36,7 @@ export default function JournalEntrySection({
 
       {endImgs.length > 0 && (
         <div className="mt-7 mb-10">
-          <FBCarousel journalImgs={endImgs} />
+          <SwiperCarousel journalImgs={endImgs} />
         </div>
       )}
     </>
