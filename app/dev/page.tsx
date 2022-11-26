@@ -1,22 +1,20 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Dev() {
   // const left = document.getElementById('left-side');
-
   const titleStyle = {
     fontSize: '8vw',
     margin: '20vw',
     width: '80vw',
   };
 
+  const [leftWidth, setLeftWidth] = useState('60%');
+
   useEffect(() => {
-    // id name is "my-btn"
-    const left = document.getElementById('left-side');
-    console.log(left);
-    const handleMove = (e) => {
-      left.style.width = `${(e.clientX / window.innerWidth) * 100}%`;
+    const handleMove = (e: Touch | MouseEvent) => {
+      setLeftWidth(`${(e.clientX / window.innerWidth) * 100}%`);
     };
 
     document.onmousemove = (e) => handleMove(e);
@@ -28,7 +26,8 @@ export default function Dev() {
     <>
       <div
         id="left-side"
-        className="bg-blue-200 w-3/5 z-20 h-screen overflow-hidden grid place-items-center absolute"
+        className="bg-blue-200 z-20 h-screen overflow-hidden grid place-items-center absolute"
+        style={{ width: leftWidth }}
       >
         <h2 className="text-white" style={titleStyle}>
           Vietmilly Journal
