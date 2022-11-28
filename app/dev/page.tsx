@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ScrollbarEvents } from 'swiper/types';
 
 export default function Dev() {
   const titleStyle = {
@@ -10,7 +9,7 @@ export default function Dev() {
     width: '80vw',
   };
 
-  const [leftWidth, setLeftWidth] = useState(60);
+  const [leftWidth, setLeftWidth] = useState(0);
 
   // tan (90-12) =  h / w -> w = h / tan (90° - 12°) = h / tan ((90-12)*Math.PI/180)
   // h = (innerHeight/2) + y
@@ -28,16 +27,6 @@ export default function Dev() {
     document.onmousemove = (e) => handleMove(e);
 
     document.ontouchmove = (e) => handleMove(e.touches[0]);
-
-    const handleScroll = (e: Event) => {
-      setLeftWidth((prev) => {
-        return (
-          prev + window.scrollY / Math.tan(((90 - 12) * Math.PI) / 180) / 100
-        );
-      });
-    };
-
-    document.onscroll = (e) => handleScroll(e);
   }, []);
 
   return (
