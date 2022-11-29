@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../public/Logo.svg';
 import SearchIcon from '../public/SearchIcon.svg';
+import { fuzzy_bubbles } from '../styles/fonts';
 
 const iconHref = '/';
 
@@ -28,7 +29,7 @@ export default function Example() {
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-              <div className="relative flex h-16 items-center justify-between">
+              <div className="relative flex h-20 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -57,8 +58,8 @@ export default function Example() {
                       alt="Vietmilly"
                     />
                   </Link>
-                  <div className="hidden sm:ml-6 sm:block">
-                    <div className="flex gap-4">
+                  <div className="hidden sm:mx-auto sm:block">
+                    <div className="flex gap-12">
                       {navigation.map((item) => (
                         <>
                           <Link
@@ -66,14 +67,14 @@ export default function Example() {
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? 'bg-gray-900 text-white'
-                                : 'text-gray-300 hover:text-white hover:border-b-[1.5px]_',
-                              'group relative mx-3 px-1 pb-0.5 pt-1.5 text-sm font-medium'
+                                ? 'bg-gray-900'
+                                : 'hover:border-b-[1.5px]_',
+                              `group relative mx-3 px-1 pb-0.5 pt-1.5 text-sm font-medium ${fuzzy_bubbles.className}`
                             )}
                             aria-current={item.current ? 'page' : undefined}
                           >
                             {item.name}
-                            <div className="w-full bg-white h-[1.5px] absolute inset-x-0 -bottom-1 transition-transform delay-75 group-hover:duration-500 duration-300 scale-x-0 -translate-x-1/2 group-hover:transform-none"></div>
+                            <div className="w-full bg-black h-[1.5px] absolute inset-x-0 -bottom-1 transition-transform delay-75 group-hover:duration-500 duration-300 scale-x-0 -translate-x-1/2 group-hover:transform-none"></div>
                           </Link>
                         </>
                       ))}

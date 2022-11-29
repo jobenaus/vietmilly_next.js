@@ -1,9 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Nerko_One } from '@next/font/google';
-
-const nerko_one = Nerko_One({ weight: '400' });
+import { nerko_one } from '../../styles/fonts';
 
 export function Dev() {
   return (
