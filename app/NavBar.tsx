@@ -4,15 +4,16 @@ import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../public/favicon.svg';
+import logo from '../public/Logo.svg';
+import SearchIcon from '../public/SearchIcon.svg';
 
 const iconHref = '/';
 
 const navigation = [
-  { name: 'Home', href: '/', current: false },
-  { name: 'Neuste', href: '/latest', current: false },
-  { name: 'Tagebuch', href: '/diary', current: false },
-  { name: 'Blog', href: '/blog', current: false },
+  { name: 'NEUSTE', href: '/latest', current: false },
+  { name: 'BLOG', href: '/blog', current: false },
+  { name: 'TAGEBUCH', href: '/diary', current: false },
+  { name: 'ÜBER UNS', href: '/about', current: false },
   // { name: 'Dev', href: '/dev', current: false },
 ];
 
@@ -81,6 +82,11 @@ export default function Example() {
                 </div>
                 {/* Rechte Seite */}
                 <>
+                  <Image
+                    className="block h-8 w-auto"
+                    src={SearchIcon}
+                    alt="SearchIcon"
+                  />
                   {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
