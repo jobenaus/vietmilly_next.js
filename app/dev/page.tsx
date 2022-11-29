@@ -45,13 +45,15 @@ export default function Dev() {
           className={`text-white skew-x-12 translate-x-20 ${nerko_one.className}`}
           style={titleStyle}
         >
-          Vietmilly Journal
+          VIETMILLY JOURNAL
         </h2>
       </div>
 
-      <div className="bg-orange-200 h-screen overflow-hidden w-full grid place-items-center absolute">
+      <div
+        className={`bg-orange-200 h-screen overflow-hidden w-full grid place-items-center absolute ${nerko_one.className}`}
+      >
         <h2 className="text-black" style={titleStyle}>
-          Vietmilly Journal
+          VIETMILLY JOURNAL
         </h2>
       </div>
       <div className="h-[200vh]"></div>
