@@ -36,10 +36,7 @@ export default function Dev() {
         className="bg-blue-200 z-20 h-screen overflow-hidden grid place-items-center absolute -skew-x-12 -translate-x-20"
         style={{ width: `${leftWidth}px` }}
       >
-        <h2
-          className="text-white skew-x-12 translate-x-20"
-          style={{ ...titleStyle }}
-        >
+        <h2 className="text-white skew-x-12 translate-x-20" style={titleStyle}>
           Vietmilly Journal
         </h2>
       </div>
