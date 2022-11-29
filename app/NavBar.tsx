@@ -22,8 +22,8 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <>
-      <Disclosure as="nav" className="bg-neutral-900">
+    <div className="z-50 absolute w-full">
+      <Disclosure as="nav" className="bg-neutral-900 bg-opacity-0">
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -182,7 +182,6 @@ export default function Example() {
           </>
         )}
       </Disclosure>
-      <div className="bg-primary w-full h-1"></div>
-    </>
+    </div>
   );
 }

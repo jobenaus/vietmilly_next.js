@@ -5,7 +5,16 @@ import { Nerko_One } from '@next/font/google';
 
 const nerko_one = Nerko_One({ weight: '400' });
 
-export default function Dev() {
+export function Dev() {
+  return (
+    <div className="h-[50vh] w-1/2 border border-blue-600 m-10 relative">
+      <div className="h-1/2 w-1/2 bg-red-600 opacity- z-10 absolute"></div>
+      <div className="h-1/2 w-1/2 bg-yellow-600 absolute inset-0"></div>
+    </div>
+  );
+}
+
+export default function DevHome() {
   const titleStyle = {
     fontSize: '8vw',
     margin: '20vw',
@@ -33,7 +42,10 @@ export default function Dev() {
   }, []);
 
   return (
-    <>
+    <div
+      className="absolute inset-0 h-screen w-full z-0
+    "
+    >
       <div
         id="left-side"
         className="bg-blue-200 z-20 h-screen overflow-hidden grid place-items-center absolute -skew-x-12 -translate-x-20"
@@ -57,6 +69,6 @@ export default function Dev() {
         </h2>
       </div>
       <div className="h-[200vh]"></div>
-    </>
+    </div>
   );
 }
