@@ -1,6 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Nerko_One } from '@next/font/google';
+
+const nerko_one = Nerko_One({ weight: '400' });
 
 export default function Dev() {
   const titleStyle = {
@@ -36,7 +39,12 @@ export default function Dev() {
         className="bg-blue-200 z-20 h-screen overflow-hidden grid place-items-center absolute -skew-x-12 -translate-x-20"
         style={{ width: `${leftWidth}px` }}
       >
-        <h2 className="text-white skew-x-12 translate-x-20" style={titleStyle}>
+        {/* <p className={nerko_one.className}>Test</p> */}
+
+        <h2
+          className={`text-white skew-x-12 translate-x-20 ${nerko_one.className}`}
+          style={titleStyle}
+        >
           Vietmilly Journal
         </h2>
       </div>
