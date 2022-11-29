@@ -28,7 +28,7 @@ export default function DevHome() {
     const handleMove = (e: Touch | MouseEvent) => {
       setLeftWidth(
         e.clientX -
-          (window.innerHeight / 2 - e.clientY - window.scrollY + 70) /
+          (window.innerHeight / 2 - e.clientY - window.scrollY) /
             Math.tan(((90 - 12) * Math.PI) / 180) +
           80
       );

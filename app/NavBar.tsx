@@ -28,8 +28,8 @@ export default function Example() {
       <Disclosure as="nav" className="bg-neutral-900 bg-opacity-0">
         {({ open }) => (
           <>
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-              <div className="relative flex h-20 items-center justify-between">
+            <div className="mx-auto px-2 sm:px-6 lg:px-8">
+              <div className="relative flex h-24 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -47,19 +47,13 @@ export default function Example() {
                     className="flex flex-shrink-0 items-center"
                   >
                     <Image
-                      className="block h-8 w-auto lg:hidden"
-                      src={logo}
-                      alt="Vietmilly"
-                    />
-
-                    <Image
-                      className="hidden h-8 w-auto lg:block"
+                      className="block h-14 w-auto lg:block"
                       src={logo}
                       alt="Vietmilly"
                     />
                   </Link>
-                  <div className="hidden sm:mx-auto sm:block">
-                    <div className="flex gap-12">
+                  <div className="hidden sm:ml-32 sm:block">
+                    <div className="flex gap-28">
                       {navigation.map((item) => (
                         <>
                           <Link
@@ -69,7 +63,7 @@ export default function Example() {
                               item.current
                                 ? 'bg-gray-900'
                                 : 'hover:border-b-[1.5px]_',
-                              `group relative mx-3 px-1 pb-0.5 pt-1.5 text-sm font-medium ${fuzzy_bubbles.className}`
+                              `group relative mx-3 px-1 pb-0.5 pt-1.5 text-2xl ${fuzzy_bubbles.className}`
                             )}
                             aria-current={item.current ? 'page' : undefined}
                           >
