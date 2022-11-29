@@ -41,7 +41,7 @@ export default function Example() {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex flex-1 items-center justify-center sm:justify-start">
                   <Link
                     href={iconHref}
                     className="flex flex-shrink-0 items-center"
@@ -52,8 +52,8 @@ export default function Example() {
                       alt="Vietmilly"
                     />
                   </Link>
-                  <div className="hidden sm:ml-32 sm:block">
-                    <div className="flex gap-28">
+                  <div className="hidden sm:mx-auto sm:block">
+                    <div className="flex gap-24">
                       {navigation.map((item) => (
                         <>
                           <Link
@@ -78,7 +78,7 @@ export default function Example() {
                 {/* Rechte Seite */}
                 <>
                   <Image
-                    className="block h-8 w-auto"
+                    className="block h-14 w-auto"
                     src={SearchIcon}
                     alt="SearchIcon"
                   />
