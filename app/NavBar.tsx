@@ -26,7 +26,20 @@ export default function NavBar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-blue-300 sm:opacity-0 absolute z-50 border h-16 w-full"
-    ></Disclosure>
+      className="bg-blue-300 sm:bg-opacity-0 absolute z-50 border h-16 w-full flex justify-between items-center"
+    >
+      {({ open }) => (
+        <>
+          <div></div>
+          <Disclosure.Button as="div" className="mr-4 sm:hidden">
+            {open ? (
+              <Image src={XMarkIcon} alt="Close main menu" />
+            ) : (
+              <Image src={Bars3Icon} alt="Open main menu" />
+            )}
+          </Disclosure.Button>
+        </>
+      )}
+    </Disclosure>
   );
 }
