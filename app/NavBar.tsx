@@ -2,11 +2,16 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+
 import { Disclosure } from '@headlessui/react';
+
 import { MagnifyingGlassIcon, Bars3Icon, XMarkIcon } from '../styles/icons';
 import { LogoWithText } from '../styles/logos';
 
 import { FuzzyBubbles } from '../styles/fonts';
+
+import { classNames } from '../utils/tailwind';
+import ChevronRightIcon from '@heroicons/react/24/outline/ChevronRightIcon';
 
 export default function NavBar() {
   const navigation = [
@@ -19,8 +24,22 @@ export default function NavBar() {
   ];
 
   return (
-    <div className="absolute z-50 border w-full h-16">
-      <Image src={LogoWithText} alt="favicon" />
+    <div className="absolute z-50 border w-full">
+      <Disclosure>
+        {({ open }) => (
+          /* Use the `open` state to conditionally change the direction of an icon. */
+          <>
+            <Disclosure.Button>
+              {!open ? (
+                <Image src={Bars3Icon} alt="open menu" />
+              ) : (
+                <Image src={XMarkIcon} alt="close menu" />
+              )}
+            </Disclosure.Button>
+            <Disclosure.Panel>No</Disclosure.Panel>
+          </>
+        )}
+      </Disclosure>
     </div>
   );
 }

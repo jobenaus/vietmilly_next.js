@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { nerko_one } from '../../styles/fonts';
+import { NerkoOne } from '../../styles/fonts';
 
 export function Dev() {
   return (
@@ -52,7 +52,7 @@ export default function DevHome() {
         {/* <p className={nerko_one.className}>Test</p> */}
 
         <h2
-          className={`text-white skew-x-12 translate-x-20 ${nerko_one.className}`}
+          className={`text-white skew-x-12 translate-x-20 ${NerkoOne.className}`}
           style={titleStyle}
         >
           VIETMILLY JOURNAL
@@ -60,7 +60,7 @@ export default function DevHome() {
       </div>
 
       <div
-        className={`bg-orange-200 h-screen overflow-hidden w-full grid place-items-center absolute ${nerko_one.className}`}
+        className={`bg-orange-200 h-screen overflow-hidden w-full grid place-items-center absolute ${NerkoOne.className}`}
       >
         <h2 className="text-black" style={titleStyle}>
           VIETMILLY JOURNAL

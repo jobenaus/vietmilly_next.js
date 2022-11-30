@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Bars3Icon from '../public/Bars3Icon.svg';
 import logo from '../public/Logo.svg';
 import SearchIcon from '../public/SearchIcon.svg';
-import { fuzzy_bubbles } from '../styles/fonts';
+import { FuzzyBubbles } from '../styles/fonts';
 
 const iconHref = '/';
 
@@ -69,7 +69,7 @@ export default function Example() {
                               item.current
                                 ? 'bg-gray-900'
                                 : 'hover:border-b-[1.5px]_',
-                              `group relative mx-3 px-1 pb-0.5 pt-1.5 text-2xl ${fuzzy_bubbles.className}`
+                              `group relative mx-3 px-1 pb-0.5 pt-1.5 text-2xl ${FuzzyBubbles.className}`
                             )}
                             aria-current={item.current ? 'page' : undefined}
                           >
