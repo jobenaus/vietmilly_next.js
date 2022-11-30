@@ -1,9 +1,10 @@
 'use client';
 
 import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
+import Bars3Icon from '../public/Bars3Icon.svg';
 import logo from '../public/Logo.svg';
 import SearchIcon from '../public/SearchIcon.svg';
 import { fuzzy_bubbles } from '../styles/fonts';
@@ -30,24 +31,29 @@ export default function Example() {
           <>
             <div className="mx-auto px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-24 items-center justify-between">
-                <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                     ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                      <Image
+                        src={Bars3Icon}
+                        alt={'Bars3Icon'}
+                        className="block h-10 w-full"
+                        aria-hidden="true"
+                      />
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="flex flex-1 items-center justify-center sm:justify-start">
+                <div className="flex flex-1 items-center justify-start">
                   <Link
                     href={iconHref}
                     className="flex flex-shrink-0 items-center"
                   >
                     <Image
-                      className="block h-14 w-auto lg:block"
+                      className="block h-10 sm:h-14 w-auto lg:block"
                       src={logo}
                       alt="Vietmilly"
                     />
@@ -78,7 +84,7 @@ export default function Example() {
                 {/* Rechte Seite */}
                 <>
                   <Image
-                    className="block h-14 w-auto"
+                    className="block h-10 sm:h-14 w-auto mr-12 sm:ml-0"
                     src={SearchIcon}
                     alt="SearchIcon"
                   />
