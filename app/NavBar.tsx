@@ -14,8 +14,9 @@ import { classNames } from '../utils/tailwind';
 import ChevronRightIcon from '@heroicons/react/24/outline/ChevronRightIcon';
 
 export default function NavBar() {
+  const logoHref = '/';
+
   const navigation = [
-    { name: 'icon', href: '/', current: true },
     { name: 'NEUSTE', href: '/latest', current: false },
     { name: 'BLOG', href: '/blog', current: false },
     { name: 'TAGEBUCH', href: '/diary', current: false },
@@ -30,22 +31,36 @@ export default function NavBar() {
     >
       {({ open }) => (
         <>
-          <Link href={navigation[0].href}>
+          <Link href={logoHref}>
             <Image src={LogoWithText} alt="LogoWithText" height={40} />
           </Link>
-          <div></div>
-          <Disclosure.Button className="sm:hidden">
-            {open ? (
-              <Image
-                src={XMarkIcon}
-                alt="Close main menu"
-                height={60}
-                className="translate-x-3 translate-y-1"
-              />
-            ) : (
-              <Image src={Bars3Icon} alt="Open main menu" height={44} />
-            )}
-          </Disclosure.Button>
+          <div className="hidden sm:flex">
+            {navigation.map((item) => (
+              <Link key={item.name} href={item.href}>
+                {item.name}
+              </Link>
+            ))}
+          </div>
+          <div className="flex gap-1">
+            <Image
+              src={MagnifyingGlassIcon}
+              alt="Search"
+              height={44}
+              className="ui-open:hidden"
+            />
+            <Disclosure.Button className="sm:hidden">
+              {open ? (
+                <Image
+                  src={XMarkIcon}
+                  alt="Close main menu"
+                  height={60}
+                  className="translate-x-3 translate-y-1"
+                />
+              ) : (
+                <Image src={Bars3Icon} alt="Open main menu" height={44} />
+              )}
+            </Disclosure.Button>
+          </div>
         </>
       )}
     </Disclosure>
