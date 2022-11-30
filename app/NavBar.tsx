@@ -24,22 +24,9 @@ export default function NavBar() {
   ];
 
   return (
-    <div className="absolute z-50 border w-full">
-      <Disclosure>
-        {({ open }) => (
-          /* Use the `open` state to conditionally change the direction of an icon. */
-          <>
-            <Disclosure.Button>
-              {!open ? (
-                <Image src={Bars3Icon} alt="open menu" />
-              ) : (
-                <Image src={XMarkIcon} alt="close menu" />
-              )}
-            </Disclosure.Button>
-            <Disclosure.Panel>No</Disclosure.Panel>
-          </>
-        )}
-      </Disclosure>
-    </div>
+    <Disclosure
+      as="nav"
+      className="bg-blue-300 sm:opacity-0 absolute z-50 border h-16 w-full"
+    ></Disclosure>
   );
 }

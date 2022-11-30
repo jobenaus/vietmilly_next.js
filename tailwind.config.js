@@ -23,5 +23,6 @@ module.exports = {
     require('flowbite/plugin'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/line-clamp'),
+    require('@headlessui/tailwindcss'),
   ],
 };
