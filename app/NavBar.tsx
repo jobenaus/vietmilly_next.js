@@ -3,7 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Disclosure } from '@headlessui/react';
-import MagnifyingGlassIcon from '../assets/icons/MagnifyingGlassIcon.svg';
+import { MagnifyingGlassIcon, Bars3Icon, XMarkIcon } from '../styles/icons';
+import { LogoWithText } from '../styles/logos';
+
+import { FuzzyBubbles } from '../styles/fonts';
 
 export default function NavBar() {
   const navigation = [
@@ -15,5 +18,9 @@ export default function NavBar() {
     // { name: 'Dev', href: '/dev', current: false },
   ];
 
-  return <div className="absolute z-50 border w-full h-16">NavBar</div>;
+  return (
+    <div className="absolute z-50 border w-full h-16">
+      <Image src={LogoWithText} alt="favicon" />
+    </div>
+  );
 }
