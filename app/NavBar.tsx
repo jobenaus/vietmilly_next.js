@@ -41,7 +41,7 @@ export default function NavBar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={classNames(FuzzyBubbles.className, 'text-lg')}
+                className={classNames(FuzzyBubbles.className, 'text-base')}
               >
                 {item.name}
               </Link>
