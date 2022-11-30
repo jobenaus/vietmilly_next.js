@@ -31,17 +31,25 @@ export default function NavBar() {
     >
       {({ open }) => (
         <>
-          <Link href={logoHref}>
+          <Link href={logoHref} className="shrink-0">
             <Image src={LogoWithText} alt="LogoWithText" height={40} />
           </Link>
-          <div className="hidden sm:flex">
+          <div className="hidden sm:flex justify-between w-full">
+            <div className="w-[3%]"></div>
+
             {navigation.map((item) => (
-              <Link key={item.name} href={item.href}>
+              <Link
+                key={item.name}
+                href={item.href}
+                className={classNames(FuzzyBubbles.className, 'text-lg')}
+              >
                 {item.name}
               </Link>
             ))}
+
+            <div className="w-[3%]"></div>
           </div>
-          <div className="flex gap-1">
+          <div className="flex gap-1 shrink-0">
             <Image
               src={MagnifyingGlassIcon}
               alt="Search"
