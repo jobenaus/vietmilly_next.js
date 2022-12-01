@@ -27,12 +27,12 @@ export default function NavBar() {
   return (
     <Disclosure
       as="nav"
-      className="px-2 bg-blue-300 sm:bg-opacity-0 fixed inset-0 z-50 h-min"
+      className="px-2 bg-blue-300 sm:bg-opacity-0 fixed inset-0 z-50 h-min border"
     >
-      {({ open }) => (
+      {({ open, close }) => (
         <>
           <div className="flex items-center justify-between h-16 w-full">
-            <Link href={logoHref} className="shrink-0">
+            <Link onClick={() => close()} href={logoHref} className="shrink-0">
               <Image src={LogoWithText} alt="LogoWithText" height={40} />
             </Link>
             <div className="basis-[28%]"></div>
@@ -71,7 +71,18 @@ export default function NavBar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">Panel</Disclosure.Panel>
+          <Disclosure.Panel className="sm:hidden">
+            {navigation.map((item) => (
+              <Disclosure.Button
+                key={item.name}
+                as={Link}
+                href={item.href}
+                className={classNames(FuzzyBubbles.className, 'text-base')}
+              >
+                {item.name}
+              </Disclosure.Button>
+            ))}
+          </Disclosure.Panel>
         </>
       )}
     </Disclosure>
