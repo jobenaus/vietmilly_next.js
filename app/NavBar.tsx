@@ -11,7 +11,7 @@ import { LogoWithText } from '../styles/logos';
 import { FuzzyBubbles } from '../styles/fonts';
 
 import { classNames } from '../utils/tailwind';
-import ChevronRightIcon from '@heroicons/react/24/outline/ChevronRightIcon';
+import { useEffect, useRef, useState } from 'react';
 
 export default function NavBar() {
   const logoHref = '/';
@@ -24,10 +24,25 @@ export default function NavBar() {
     // { name: 'Dev', href: '/dev', current: false },
   ];
 
+  const [opacity, setOpacity] = useState(0);
+
+  const op = '0.1';
+
+  useEffect(() => {
+    document.onscroll = () => {
+      const val = window.scrollY / 100;
+
+      setOpacity(val);
+    };
+  });
+
   return (
     <Disclosure
       as="nav"
-      className="px-4 bg-blue-300 sm:bg-opacity-0 fixed inset-0 z-50 h-min border"
+      className={classNames(
+        `px-4 bg-blue-300 fixed inset-0 z-50 h-min border sm:bg-opacity-[${op}]`
+      )}
+      style={{ opacity: opacity }}
     >
       {({ open, close }) => (
         <>
