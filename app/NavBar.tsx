@@ -34,9 +34,8 @@ export default function NavBar() {
           <Link href={logoHref} className="shrink-0">
             <Image src={LogoWithText} alt="LogoWithText" height={40} />
           </Link>
-          <div className="hidden sm:flex justify-between w-full">
-            <div className="w-[3%]"></div>
-
+          <div className="basis-[28%]"></div>
+          <div className="hidden sm:flex justify-between basis-[627px] shrink-[0.4]">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -46,9 +45,9 @@ export default function NavBar() {
                 {item.name}
               </Link>
             ))}
-
-            <div className="w-[3%]"></div>
           </div>
+          <div className="basis-[28%]"></div>
+
           <div className="flex gap-1 shrink-0">
             <Image
               src={MagnifyingGlassIcon}
