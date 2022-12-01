@@ -27,7 +27,7 @@ export default function NavBar() {
   return (
     <Disclosure
       as="nav"
-      className="px-2 bg-blue-300 sm:bg-opacity-0 fixed inset-0 z-50 h-min border"
+      className="px-4 bg-blue-300 sm:bg-opacity-0 fixed inset-0 z-50 h-min border"
     >
       {({ open, close }) => (
         <>
@@ -71,13 +71,13 @@ export default function NavBar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="sm:hidden space-y-3 pt-4 pb-6 px-2">
             {navigation.map((item) => (
               <Disclosure.Button
                 key={item.name}
                 as={Link}
                 href={item.href}
-                className={classNames(FuzzyBubbles.className, 'text-base')}
+                className={classNames(FuzzyBubbles.className, 'text-lg block')}
               >
                 {item.name}
               </Disclosure.Button>
