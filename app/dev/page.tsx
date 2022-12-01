@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { NerkoOne } from '../../styles/fonts';
 
-export function Dev() {
+function Dev() {
   return (
     <div className="h-[50vh] w-1/2 border border-blue-600 m-10 relative">
       <div className="h-1/2 w-1/2 bg-red-600 opacity- z-10 absolute"></div>

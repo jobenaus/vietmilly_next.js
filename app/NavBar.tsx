@@ -26,11 +26,9 @@ export default function NavBar() {
 
   const [opacity, setOpacity] = useState(0);
 
-  const op = '0.1';
-
   useEffect(() => {
     document.onscroll = () => {
-      const val = window.scrollY / 100;
+      const val = (window.scrollY / 100) * 4;
 
       setOpacity(val);
     };
@@ -39,10 +37,8 @@ export default function NavBar() {
   return (
     <Disclosure
       as="nav"
-      className={classNames(
-        `px-4 bg-blue-300 fixed inset-0 z-50 h-min border sm:bg-opacity-[${op}]`
-      )}
-      style={{ opacity: opacity }}
+      className="px-4 fixed inset-0 z-50 h-min border bg-blue-300"
+      style={{ ['--tw-bg-opacity' as any]: opacity }}
     >
       {({ open, close }) => (
         <>
