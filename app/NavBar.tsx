@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+// import { screens } from 'tailwindcss/defaultTheme';
+
 import { Disclosure } from '@headlessui/react';
 
 import { MagnifyingGlassIcon, Bars3Icon, XMarkIcon } from '../styles/icons';
@@ -10,8 +12,8 @@ import { LogoWithText } from '../styles/logos';
 
 import { FuzzyBubbles } from '../styles/fonts';
 
-import { classNames } from '../utils/tailwind';
-import { useEffect, useRef, useState } from 'react';
+import { classNames, useMediaQuery } from '../utils/tailwind';
+import { useEffect, useState } from 'react';
 
 export default function NavBar() {
   const logoHref = '/';
@@ -29,16 +31,15 @@ export default function NavBar() {
   useEffect(() => {
     document.onscroll = () => {
       const val = (window.scrollY / 100) * 4;
-
       setOpacity(val);
     };
-  });
+  }, []);
 
   return (
     <Disclosure
       as="nav"
-      className="px-4 fixed inset-0 z-50 h-min border bg-blue-300"
-      style={{ ['--tw-bg-opacity' as any]: opacity }}
+      className="px-4 fixed inset-0 z-50 h-min bg-blue-300 "
+      style={{ ['--tw-bg-opacity' as any]: useMediaQuery('sm') ? opacity : 1 }}
     >
       {({ open, close }) => (
         <>
