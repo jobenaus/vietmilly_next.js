@@ -1,27 +1,35 @@
 [
   {
     "id": 2,
-    "upload_date": "2022-11-16",
+    "upload_date": "2022-12-02",
     "title": "Wie Milly das Moped den vietnamesischen Straßenverkehr erlebt",
-    "thumbnail": "Anschaffungsphoto Milly",
+    "thumbnail": "IMG_5150",
     "sections": [
       {
         "id": 1,
-        "text": "Hallo, ich bin Milly! Ich bin ein -jähriges Moped, dass vor zwei Monaten von Eleonore und Johannes adoptiert wurde. Eleonore wollte mich Molly nennen, weil ich bequem und rund aussehe. Johannes fand, dass Molly meiner starken Leistung nicht gerecht wird. Und so haben sie sich auf den Namen Milly geeinigt, weil ich millardenstark bin!"
+        "text": "Hallo, ich bin Milly! Ich bin ein -jähriges Moped, dass vor zwei Monaten von Eleonore und Johannes adoptiert wurde. Eleonore wollte mich Molly nennen, weil ich bequem und rund aussehe. Johannes fand, dass Molly meiner starken Leistung nicht gerecht wird. Und so haben sie sich auf den Namen Milly geeinigt, weil ich millardenstark bin!",
+        "endImgs": [
+          { "img": "anschaffungsphoto" },
+          { "img": "IMG_5068" },
+          { "img": "IMG_5064" }
+        ]
       },
       {
         "id": 2,
         "text": "Eleonore und Johannes sind beim Fahren immer sehr aufmerksam. Eins von ihnen ist Piloti, das andere das Kopiloti, dass von hinten intelligente Einwürfe gibt: “Moped von rechts, Moped von links, Moped ohne Licht auf 11 Uhr, moped-fahrendes Kind auf 1 Uhr, Erdrutsch auf 2 Uhr...”. Sie fahren so, weil sie denken, dass man jederzeit mit allem rechnen muss. Zugegebenermaßen sind die Verkehrsregeln hier auch eher biegsam, und rote Ampeln, Blinken, Zebrastreifen oder Einbahnstraßen werden nicht so ernst genommen.",
         "endImgs": [
-          { "img": "kopilot-bild" },
-          { "img": "stroh" },
-          { "img": "bagger" }
+          { "img": "IMG_6305" },
+          {
+            "img": "IMG_8792",
+            "description": "Ich fahre zwar nicht auf einem roten, aber dafür auf einem Strohteppich"
+          },
+          { "img": "IMG_8820" }
         ]
       },
       {
         "id": 3,
         "text": "Auch wenn Johannes und Eleonore die Hauptverkehrszeit im Stadtgetümmel am stressigsten finden, ist das meine Lieblingszeit. Denn Hauptverkehrszeit ist Kuschelzeit. Da sind alle Mopeds so nah beieinander, dass man immer Mal ein anderes küsst oder sich daran schmiegt. In dieser Zeit können wir Mopeds unsere magische Kraft benutzten, uns durch den kleinsten Spalt zu quetschen. Ich habe letztens gesehen, dass ein Moped mit den Spiegeln an Bus und Hausmauer langgekratzt ist. Man bin ich neidisch. Johannes und Eleonore haben mich bisher keusch leben lassen und das finde ich sehr doof. Die anderen Mopeds dürfen ja auch, wenigstens immer mal.",
-        "endImgs": [{ "img": "stau-photo" }]
+        "endImgs": [{ "img": "IMG_8925" }, { "img": "IMG_9215" }]
       },
       {
         "id": 4,
@@ -34,31 +42,58 @@
       {
         "id": 6,
         "text": "Wir hatten auch schonmal einen Unfall, aber nicht mit einem LKW. Da musste ich zur Mopedärztin gehen. Es musste ein bisschen was angeklebt werden. Sowas geht immer ganz schnell und nach zehn Minuten sind wir wieder auf der Straße. Wegen meiner Bremsen haben mich die beiden auch schon oft genug in die Praxis geschleppt. Ich dachte, nach den ersten beiden Malen wäre klar, dass ich einfach nicht langsamer fahren möchte. Aber die zwei sind echt eigenwillig. Jetzt haben sie die gesamte Bremsscheibe austauschen lassen. Das war eine größere Operation und ich musste eine Stunde allein dortbleiben, weil der Arzt Ersatzteile besorgen musste. Eleonore und Johannes schrauben nie selbst an mir herum, weil die Praxen wirklich bezahlbar sind. Ist auch besser so, wer weiß, was sie kaputtschrauben würden.",
-        "endImgs": [{ "img": "moped-panne-photo" }, { "img": "wekstatt-photo" }]
+        "endImgs": [
+          { "img": "IMG_8618", "description": "Moped Pfanne :(" },
+          { "img": "IMG_8622", "description": "Beim Arzt" }
+        ]
       },
       {
         "id": 7,
         "text": "Man muss ihnen lassen, dass sie mich nur sehr leicht beladen. Sie fahren höchstes zu zweit mit einem Rucksack. Wenn ich da manchmal die anderen Mopeds sehe… Die haben bestimmt abends Rückenschmerzen. Denen wird ein Kühlschrank, 5 chinesische Vasen, 300kg Wasser, eine ganze Familie, vier erwachsene Freunde, dreckige Tiere und sonst was an jede mögliche Stelle geschnallt. Selbst zwischen den Füßen der Fahrerin müssen sie Kinder, Hunde, oder Einkäufe transportieren. Manche Fahrer ziehen auch mit einer Hand einen halben Wald hinter sich her.",
         "endImgs": [
-          { "img": "Familie" },
-          { "img": "Freunde" },
-          { "img": "Vasen" },
-          { "img": "Kühlschrank" },
-          { "img": "Tiere" },
-          { "img": "Mein Ur-Ur-Ur-Großvater musste auch schon viel schleppen." }
+          { "img": "IMG_6310" },
+          { "img": "IMG_6306" },
+          { "img": "IMG_8828" },
+          { "img": "IMG_8866" },
+          { "img": "IMG_8902" },
+          { "img": "IMG_8904" },
+          { "img": "IMG_8903" },
+          {
+            "img": "IMG_9193",
+            "description": "In der Ferne sieht man fünf chinesische Vasen"
+          },
+          { "img": "IMG_8929" },
+          { "img": "IMG_8905" },
+          { "img": "IMG_9164" },
+          { "img": "IMG_9389" },
+          {
+            "img": "IMG_9383",
+            "description": "So hoch beladen, dass der Fahrer absteigen muss, um meinen Kollegen zu kippen!"
+          },
+          {
+            "img": "IMG_6231",
+            "description": "Mein Ur-Ur-Ur-Großvater musste auch schon viel schleppen."
+          }
         ]
       },
       {
         "id": 8,
         "text": "In meinem Kofferraum trage ich immer zwei Regenschutzoutfits, FFP2-Masken und einen kleinen Beutel mit Geld. Die FFP2-Masken tragen Johannes und Eleonore, weil sie finden, dass wir Mopeds einen stinkigen Smog über die Stadt legen. Vielen Dank auch, ich hätte auch gern eine Maske für die Menschenmüffel. Oft verbrennen die Leute aber auch Plastik am Straßenrand, oder es fliegt jede Menge Sand in Augen und Nasennebenholen. Dagegen hilft die Maske dann auch. Dafür brauche ich keine Maske, ich wurde im Gegensatz zu den Menschen richtig dicht fabriziert. Das Geld ist für die Polizei, falls wir angehalten werden. Die können einen jederzeit stoppen und Geld verlangen. Dann müssen die Fahrer mit der Polizei aushandeln, wieviel sie bezahlen wollen. Eleonore und Johannes müssen besonders aufpassen, weil sie keinen gültigen Führerschein haben. Zum Glück werden sie wahrscheinlich nicht gestoppt, weil die Polizei kein Englisch kann.",
         "endImgs": [
-          { "img": "Koffenrraum" },
-          { "img": "Outfit-in-mu-cang-chai" }
+          { "img": "IMG_5533" },
+          { "img": "IMG_5151" },
+          { "img": "IMG_5301" },
+          { "img": "IMG_8778" },
+          {
+            "img": "IMG_9380",
+            "description": "Meine Eltern sind nicht die einzigen mit blauem Regeschutz."
+          }
         ]
       },
       {
         "id": 9,
-        "text": "Nur so am Rande erwähnt, für die Fans in Deutschland, die mir gern ein Gefallen tun möchten: am liebsten trinke ich Benzin, ungefähr 2 Liter pro 100km. Wenn ich Durst habe, halten wir an einer Bar und fahren direkt vor die Füße der Barkeepis. Die füllen mich dann schnell ab und kassieren an Ort und Stelle von Johannes und Eleonore. Dann geht’s direkt weiter, weil um uns schon eine Traube anderer durstiger Mopeds steht, die sich von allen Seiten reindrängen. Aber Benzin kann man bestimmt auch gut per Post verschicken. Bitte achtet darauf, dass es nicht auf Mopeds hierher transportiert wird. Wegen fairer Mopedhaltung, und so…"
+        "text": "Nur so am Rande erwähnt, für die Fans in Deutschland, die mir gern ein Gefallen tun möchten: am liebsten trinke ich Benzin, ungefähr 2 Liter pro 100km. Wenn ich Durst habe, halten wir an einer Bar und fahren direkt vor die Füße der Barkeepis. Die füllen mich dann schnell ab und kassieren an Ort und Stelle von Johannes und Eleonore. Dann geht’s direkt weiter, weil um uns schon eine Traube anderer durstiger Mopeds steht, die sich von allen Seiten reindrängen. Aber Benzin kann man bestimmt auch gut per Post verschicken. Bitte achtet darauf, dass es nicht auf Mopeds hierher transportiert wird. Wegen fairer Mopedhaltung, und so…",
+        "endImgs": [{ "img": "IMG_9393" }, { "img": "IMG_9394" }]
       }
     ]
   }
