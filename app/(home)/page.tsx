@@ -16,7 +16,7 @@ export default function Home() {
         <JournalPagePreview
           journalEntrys={latestJournalEntrys}
           previewSize={previewSize}
-          previewTitle="Neuste Journal Einträge"
+          previewTitle="Neuste Einträge"
         />
         {favouriteBlogPosts.length > 0 && (
           <JournalPagePreview
