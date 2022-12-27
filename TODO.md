@@ -17,9 +17,11 @@ next steps:
   
 
 bugs:
+- Schrift am Handy zu groß
 
 
 requested features:
+- Navbar zeigen wo man ist
 - carousel indicators
 - bilder durch antippen groß machen
   
