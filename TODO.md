@@ -1,14 +1,19 @@
 necessary features:
+- linebreaks in blog
+- 
 
 nice to have features:
 - bildunterschrift unter bild im carousel
 - import Pictures
 - navbar animation
 - finetune primary color
+- Exerpt necessary
+
 
 refactoring:
 - rewrite carousel
 - delete unessacary css
+- typesafety
 
 next steps:
 - Besseren workflow zum Blog hinzufügen finden (React Quill)
